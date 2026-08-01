@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Para la niña más especial 🤍</title>
+
+    <!-- Conecta el archivo CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- ============================= -->
+    <!-- PANTALLA DE BIENVENIDA -->
+    <!-- ============================= -->
+
+    <section id="inicio" class="pantalla-inicio">
+      <!-- Fondo de estrellas -->
+      <div class="estrellas"></div>
+
+      <div class="bienvenida">
+        <!-- Corazón principal -->
+        <div class="corazon-principal">♡</div>
+
+        <!-- TÍTULO PRINCIPAL -->
+        <h1>Para la niña más especial 🤍</h1>
+
+        <!-- DESCRIPCIÓN -->
+        <p>
+          Preparé este pequeño espacio pensando en ti, para guardar algunos
+          momentos, recuerdos y palabras que quiero compartir contigo. Espero
+          que cada detalle pueda sacarte una sonrisa. ✨
+        </p>
+
+        <!-- BOTÓN PARA INICIAR -->
+        <button id="btnIniciar">Iniciar nuestra historia ✨</button>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ============================= -->
+
+    <main id="contenido" class="contenido oculto">
+      <div class="galaxia">
+        <!-- ENCABEZADO -->
+
+        <div class="encabezado">
+          <span>✨</span>
+
+          <h2>Un pequeño espacio para ti</h2>
+
+          <p>
+            Cada foto guarda un momento, y cada momento tiene algo especial.
+          </p>
+        </div>
+
+        <!-- ============================= -->
+        <!-- CORAZÓN DE FOTOS -->
+        <!-- ============================= -->
+
+        <div class="corazon-fotos">
+          <!-- FOTO 1 -->
+
+          <div
+            class="foto foto1"
+            data-titulo="Mi niña 🤍"
+            data-mensaje="Aquí puedes escribir el mensaje que quieras dedicarle."
+          >
+            <img src="./fotos/foto1.jpg" alt="Foto especial" />
+          </div>
+
+          <!-- FOTO 2 -->
+
+          <div
+            class="foto foto2"
+            data-titulo="Esa sonrisa 😊"
+            data-mensaje="Aquí puedes escribir algo bonito sobre su sonrisa."
+          >
+            <img src="./fotos/foto2.jpg" alt="Foto especial" />
+          </div>
+
+          <!-- FOTO 3 -->
+
+          <div
+            class="foto foto3"
+            data-titulo="La más bonita ✨"
+            data-mensaje="Aquí puedes escribir un mensaje especial para ella."
+          >
+            <img src="./fotos/foto3.jpg" alt="Foto especial" />
+          </div>
+
+          <!-- FOTO 4 -->
+
+          <div
+            class="foto foto4"
+            data-titulo="Tus ojitos 🤍"
+            data-mensaje="Aquí puedes escribir algo bonito sobre sus ojitos."
+          >
+            <img src="./fotos/foto4.jpg" alt="Foto especial" />
+          </div>
+
+          <!-- FOTO 5 -->
+
+          <div
+            class="foto foto5"
+            data-titulo="Un momento especial 🌷"
+            data-mensaje="Aquí puedes escribir lo que este momento significa para ti."
+          >
+            <img src="./fotos/foto5.jpg" alt="Foto especial" />
+          </div>
+
+          <!-- FOTO 6 -->
+
+          <div
+            class="foto foto6"
+            data-titulo="Tú ✨"
+            data-mensaje="Aquí puedes escribir otro mensaje especial."
+          >
+            <img src="./fotos/foto6.jpg" alt="Foto especial" />
+          </div>
+        </div>
+
+        <!-- INDICACIÓN -->
+
+        <div class="indicacion">
+          <span>♡</span>
+
+          Toca una foto para descubrir un mensaje
+
+          <span>♡</span>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- MENSAJE FINAL -->
+      <!-- ============================= -->
+
+      <section class="final">
+        <div class="corazon-final">♥</div>
+
+        <h2>Y esto es solo el comienzo...</h2>
+
+        <p>
+          Gracias por formar parte de mis días y por hacerlos un poquito más
+          bonitos. Espero que este pequeño detalle pueda sacarte una sonrisa. 🤍
+        </p>
+
+        <span class="firma"> Con cariño, Abraham 🤍 </span>
+
+        <button id="volver">Volver a ver nuestras fotos ♡</button>
+      </section>
+    </main>
+
+    <!-- ============================= -->
+    <!-- VENTANA EMERGENTE DE FOTOS -->
+    <!-- ============================= -->
+
+    <div id="modal" class="modal">
+      <div class="modal-contenido">
+        <!-- BOTÓN CERRAR -->
+
+        <button id="cerrar" class="cerrar">×</button>
+
+        <!-- IMAGEN -->
+
+        <img id="modalImagen" src="" alt="Foto" />
+
+        <!-- TEXTO -->
+
+        <div class="modal-texto">
+          <h2 id="modalTitulo"></h2>
+
+          <p id="modalMensaje"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================= -->
+    <!-- CONECTAR JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

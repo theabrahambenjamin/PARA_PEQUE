@@ -1,0 +1,542 @@
+/* ============================= */
+/* CONFIGURACIÓN GENERAL */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+
+  background: #05010c;
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* PANTALLA DE INICIO */
+/* ============================= */
+
+.pantalla-inicio {
+  min-height: 100vh;
+
+  min-height: 100svh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: radial-gradient(
+      circle at center,
+      rgba(91, 35, 120, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #05010c, #14051f, #080312);
+}
+
+/* ============================= */
+/* ESTRELLAS */
+/* ============================= */
+
+.estrellas::before,
+.estrellas::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+
+  background-size: 80px 80px;
+
+  opacity: 0.4;
+
+  animation: moverEstrellas 30s linear infinite;
+}
+
+.estrellas::after {
+  background-size: 130px 130px;
+
+  animation-duration: 50s;
+
+  opacity: 0.2;
+}
+
+@keyframes moverEstrellas {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-80px);
+  }
+}
+
+/* ============================= */
+/* BIENVENIDA */
+/* ============================= */
+
+.bienvenida {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 600px;
+
+  animation: aparecer 2s ease;
+}
+
+.corazon-principal {
+  font-size: 100px;
+
+  color: #ff8fca;
+
+  text-shadow: 0 0 20px #ff4fa3, 0 0 50px #ff4fa3;
+
+  animation: latido 2s infinite;
+
+  margin-bottom: 20px;
+}
+
+.bienvenida h1 {
+  font-size: clamp(2rem, 7vw, 4rem);
+
+  margin-bottom: 20px;
+}
+
+.bienvenida p {
+  color: #e9dce9;
+
+  line-height: 1.7;
+
+  font-size: 1.05rem;
+
+  margin-bottom: 35px;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+
+button {
+  border: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+#btnIniciar,
+#volver {
+  padding: 15px 28px;
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-size: 1rem;
+
+  background: linear-gradient(135deg, #ff4f9a, #a84dff);
+
+  box-shadow: 0 0 20px rgba(255, 79, 154, 0.5);
+
+  transition: 0.3s;
+}
+
+#btnIniciar:hover,
+#volver:hover {
+  transform: scale(1.06);
+
+  box-shadow: 0 0 35px rgba(255, 79, 154, 0.8);
+}
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+
+.contenido {
+  min-height: 100vh;
+
+  background: radial-gradient(circle at center, #26103c, #08020f 70%);
+}
+
+.oculto {
+  display: none;
+}
+
+.galaxia {
+  min-height: 100vh;
+
+  padding: 70px 20px 100px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.encabezado {
+  text-align: center;
+
+  max-width: 600px;
+
+  margin-bottom: 60px;
+}
+
+.encabezado span {
+  font-size: 40px;
+}
+
+.encabezado h2 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+
+  margin: 15px 0;
+}
+
+.encabezado p {
+  color: #d9c9df;
+
+  line-height: 1.7;
+}
+
+/* ============================= */
+/* CORAZÓN DE FOTOS */
+/* ============================= */
+
+.corazon-fotos {
+  width: min(90vw, 650px);
+
+  height: min(90vw, 650px);
+
+  position: relative;
+
+  margin: 20px auto 40px;
+}
+
+.foto {
+  position: absolute;
+
+  width: 24%;
+
+  aspect-ratio: 1;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border: 3px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow: 0 0 20px rgba(255, 100, 190, 0.5);
+
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.foto:hover {
+  transform: scale(1.15) rotate(2deg);
+
+  z-index: 10;
+
+  box-shadow: 0 0 40px rgba(255, 100, 200, 0.9);
+}
+
+.foto img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* ============================= */
+/* POSICIONES DE LAS FOTOS */
+/* ============================= */
+
+.foto1 {
+  left: 20%;
+
+  top: 5%;
+}
+
+.foto2 {
+  left: 56%;
+
+  top: 5%;
+}
+
+.foto3 {
+  left: 5%;
+
+  top: 30%;
+}
+
+.foto4 {
+  left: 39%;
+
+  top: 30%;
+}
+
+.foto5 {
+  left: 72%;
+
+  top: 30%;
+}
+
+.foto6 {
+  left: 39%;
+
+  top: 57%;
+}
+
+/* ============================= */
+/* INDICACIÓN */
+/* ============================= */
+
+.indicacion {
+  color: #d9b9d7;
+
+  text-align: center;
+
+  font-size: 0.9rem;
+}
+
+.indicacion span {
+  color: #ff76b8;
+
+  margin: 0 10px;
+}
+
+/* ============================= */
+/* MENSAJE FINAL */
+/* ============================= */
+
+.final {
+  min-height: 80vh;
+
+  padding: 80px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: linear-gradient(180deg, #08020f, #190722);
+}
+
+.corazon-final {
+  font-size: 80px;
+
+  color: #ff70b5;
+
+  animation: latido 2s infinite;
+}
+
+.final h2 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+
+  margin: 20px 0;
+}
+
+.final p {
+  max-width: 600px;
+
+  line-height: 1.8;
+
+  color: #ddcce1;
+}
+
+.firma {
+  margin: 30px 0;
+
+  color: #ff9bca;
+
+  font-size: 1.2rem;
+}
+
+/* ============================= */
+/* MODAL */
+/* ============================= */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(5, 0, 15, 0.85);
+
+  backdrop-filter: blur(12px);
+}
+
+.modal.activo {
+  display: flex;
+}
+
+.modal-contenido {
+  width: min(100%, 450px);
+
+  background: rgba(35, 12, 48, 0.95);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 25px;
+
+  padding: 15px;
+
+  position: relative;
+
+  animation: aparecerModal 0.4s ease;
+}
+
+.modal-contenido img {
+  width: 100%;
+
+  max-height: 55vh;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+}
+
+.modal-texto {
+  padding: 20px 10px;
+
+  text-align: center;
+}
+
+.modal-texto h2 {
+  color: #ff9bca;
+
+  margin-bottom: 10px;
+}
+
+.modal-texto p {
+  color: #eaddeb;
+
+  line-height: 1.7;
+}
+
+.cerrar {
+  position: absolute;
+
+  right: 20px;
+
+  top: 15px;
+
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  color: white;
+
+  font-size: 25px;
+
+  z-index: 5;
+}
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes latido {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecerModal {
+  from {
+    opacity: 0;
+
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* ============================= */
+/* CELULARES PEQUEÑOS */
+/* ============================= */
+
+@media (max-width: 400px) {
+  .corazon-fotos {
+    width: 95vw;
+
+    height: 95vw;
+  }
+
+  .foto {
+    border-radius: 12px;
+
+    border-width: 2px;
+  }
+
+  .bienvenida {
+    padding: 10px;
+  }
+}
